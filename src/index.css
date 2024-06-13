@@ -1,0 +1,12 @@
+@import '@fontsource/inter';
+@import '@fontsource/montserrat';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-inter;
+  }
+}
