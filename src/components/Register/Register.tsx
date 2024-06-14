@@ -5,7 +5,7 @@ import {
   IoPerson,
   IoPersonOutline,
 } from 'react-icons/io5';
-import { Button, Checkbox, Input } from '../common';
+import { Button, Checkbox, Input } from '..';
 
 export const Register: React.FC = () => {
   return (
