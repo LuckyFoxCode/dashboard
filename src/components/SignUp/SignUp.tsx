@@ -7,9 +7,9 @@ import {
   IoPerson,
   IoPersonOutline,
 } from 'react-icons/io5';
-import { Button, Checkbox, Input } from '..';
+import { Button, Checkbox, Input } from '../common';
 
-export const FormRegister: React.FC = () => {
+export const SignUp: React.FC = () => {
   const [userData, setUserData] = useState<UserRegister[]>([]);
   const [user, setUser] = useState<UserRegister>({
     id: '',
