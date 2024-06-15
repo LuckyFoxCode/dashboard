@@ -7,6 +7,7 @@ import {
   IoPerson,
   IoPersonOutline,
 } from 'react-icons/io5';
+import { Link } from 'react-router-dom';
 import { Button, Checkbox, Input } from '../common';
 
 export const SignUp: React.FC = () => {
@@ -125,12 +126,12 @@ export const SignUp: React.FC = () => {
       </form>
       <div className='flex gap-x-1'>
         <p className='text-slate-700'>Already have an account?</p>
-        <a
-          href='#'
+        <Link
+          to='/login'
           className='flex text-blue-400 transition-colors duration-300 hover:text-blue-500'
         >
           Sign In
-        </a>
+        </Link>
       </div>
     </div>
   );
