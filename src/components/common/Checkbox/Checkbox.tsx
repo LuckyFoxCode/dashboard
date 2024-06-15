@@ -3,13 +3,13 @@ import { useState } from 'react';
 import { IoCheckmark } from 'react-icons/io5';
 import { Icon } from '../Icon';
 
-export const Checkbox: React.FC = () => {
-  const [checked, setChecked] = useState<boolean>(false);
-  const [focused, setFocused] = useState<boolean>(false);
+interface CheckboxProps {
+  checked?: boolean;
+  onChange?: () => void;
+}
 
-  const handleChange = () => {
-    setChecked(!checked);
-  };
+export const Checkbox: React.FC<CheckboxProps> = ({ checked, onChange }) => {
+  const [focused, setFocused] = useState<boolean>(false);
 
   const handleFocus = () => {
     setFocused(true);
@@ -25,12 +25,12 @@ export const Checkbox: React.FC = () => {
         type='checkbox'
         className='hidden'
         checked={checked}
-        onChange={handleChange}
+        onChange={onChange}
         onFocus={handleFocus}
         onBlur={handleBlur}
       />
       <div
-        onClick={handleChange}
+        onClick={onChange}
         onFocus={handleFocus}
         onBlur={handleBlur}
         tabIndex={0}

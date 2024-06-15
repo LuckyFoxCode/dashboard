@@ -10,6 +10,7 @@ import {
 import { Button, Checkbox, Input } from '../common';
 
 export const SignUp: React.FC = () => {
+  const [checked, setChecked] = useState<boolean>(false);
   const [userData, setUserData] = useState<UserRegister[]>([]);
   const [user, setUser] = useState<UserRegister>({
     id: '',
@@ -32,6 +33,7 @@ export const SignUp: React.FC = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setUserData([...userData, user]);
+    setChecked(false);
     setUser({
       id: '',
       firstName: '',
@@ -44,11 +46,13 @@ export const SignUp: React.FC = () => {
   };
 
   return (
-    <div className='w-full max-w-[640px] rounded-lg border bg-white p-10 font-montserrat shadow-md'>
-      <h2 className='mb-5 text-3xl font-bold text-gray-800'>Sign Up</h2>
+    <div className='w-full max-w-[640px] rounded-lg border bg-white px-2 py-4 font-montserrat shadow-md sm:p-10'>
+      <h2 className='mb-3 text-center text-3xl font-bold text-gray-800 sm:mb-5 md:text-left'>
+        Sign Up
+      </h2>
       <form
         onSubmit={handleSubmit}
-        className='mb-4 flex w-full flex-col gap-y-5'
+        className='mb-4 flex w-full flex-col gap-y-2 sm:gap-y-5'
       >
         <Input
           iconSize={24}
@@ -104,13 +108,17 @@ export const SignUp: React.FC = () => {
           onChange={handleChange}
           placeholder='Confirm Password'
         />
-        <div className='flex items-center gap-x-6'>
-          <Checkbox />
-          <span>I agree to all terms</span>
+        <div className='flex items-center gap-x-3 md:gap-x-6'>
+          <Checkbox
+            checked={checked}
+            onChange={() => setChecked(!checked)}
+          />
+          <span className='text-slate-800'>I agree to all terms</span>
         </div>
         <Button
+          disabled={!checked}
           type='submit'
-          className='w-fit'
+          className='w-full py-3 md:w-fit md:py-5'
         >
           Register
         </Button>
