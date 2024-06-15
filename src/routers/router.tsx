@@ -1,4 +1,4 @@
-import { Register } from '@/pages';
+import { Login, Register } from '@/pages';
 import { createBrowserRouter } from 'react-router-dom';
 
 export const router = createBrowserRouter([
@@ -14,7 +14,7 @@ export const router = createBrowserRouter([
   },
   {
     path: 'login',
-    element: <div>Login</div>,
+    element: <Login />,
     errorElement: <div>Not Found</div>,
   },
 ]);
