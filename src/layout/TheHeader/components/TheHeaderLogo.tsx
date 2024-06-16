@@ -12,8 +12,8 @@ export const TheHeaderLogo: React.FC<TheHeaderLogoProps> = ({ className }) => {
       className={cn(className)}
     >
       <h1 className='text-2xl font-semibold text-rose-500'>
-        Dash
-        <span className='text-black transition-all dark:text-white'>board</span>
+        ToDo
+        <span className='text-black transition-all dark:text-white'>HQ</span>
       </h1>
     </Link>
   );
