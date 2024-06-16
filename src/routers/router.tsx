@@ -1,10 +1,10 @@
-import { Login, Register } from '@/pages';
+import { Login, Register, Root } from '@/pages';
 import { createBrowserRouter } from 'react-router-dom';
 
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <div>Home</div>,
+    element: <Root />,
     errorElement: <div>Not Found</div>,
   },
   {
