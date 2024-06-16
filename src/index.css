@@ -7,6 +7,10 @@
 
 @layer base {
   body {
-    @apply font-inter;
+    @apply bg-white font-inter transition-all;
   }
+}
+
+.dark body {
+  @apply bg-slate-900;
 }
