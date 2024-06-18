@@ -1,3 +1,4 @@
+import { Dashboard } from '@/components';
 import { Login, NotFound, Register, Root } from '@/pages';
 import { createBrowserRouter } from 'react-router-dom';
 
@@ -9,7 +10,7 @@ export const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <h1>Dashboard v.2</h1>,
+        element: <Dashboard />,
       },
       {
         path: '/vital-task',
