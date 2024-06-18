@@ -7,7 +7,7 @@ import {
   IoPerson,
   IoPersonOutline,
 } from 'react-icons/io5';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Button, Checkbox, Input } from '../common';
 
 export const SignUp: React.FC = () => {
@@ -22,6 +22,8 @@ export const SignUp: React.FC = () => {
     password: '',
     confirmPassword: '',
   });
+
+  const navigate = useNavigate();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUser({
@@ -44,6 +46,8 @@ export const SignUp: React.FC = () => {
       password: '',
       confirmPassword: '',
     });
+
+    navigate('/');
   };
 
   return (

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { IoLockClosed, IoPerson } from 'react-icons/io5';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Button, Checkbox, Input } from '../common';
 
 export const SignIn: React.FC = () => {
@@ -9,6 +9,8 @@ export const SignIn: React.FC = () => {
     username: '',
     password: '',
   });
+
+  const navigate = useNavigate();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUser({
@@ -25,6 +27,8 @@ export const SignIn: React.FC = () => {
       username: '',
       password: '',
     });
+
+    navigate('/');
   };
 
   return (
