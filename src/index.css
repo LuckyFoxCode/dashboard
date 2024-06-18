@@ -9,8 +9,14 @@
   body {
     @apply bg-white font-inter transition-all;
   }
+
+  .dark body {
+    @apply bg-slate-900;
+  }
 }
 
-.dark body {
-  @apply bg-slate-900;
+@layer components {
+  .aside-link {
+    @apply flex items-center rounded-xl bg-inherit p-4 capitalize transition-all duration-300 hover:bg-white hover:text-rose-500;
+  }
 }

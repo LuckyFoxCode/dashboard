@@ -1,3 +1,5 @@
+import { IconType } from 'react-icons';
+
 export interface UserRegister {
   id: string;
   firstName: string;
@@ -6,4 +8,10 @@ export interface UserRegister {
   email: string;
   password: string;
   confirmPassword: string;
+}
+
+export interface NavItem {
+  path: string;
+  name: string;
+  icon: IconType;
 }
