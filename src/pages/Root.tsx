@@ -1,4 +1,4 @@
-import { Aside, TheHeader } from '@/layout';
+import { Aside, Content, TheHeader } from '@/layout';
 
 export const Root: React.FC = () => {
   return (
@@ -6,6 +6,7 @@ export const Root: React.FC = () => {
       <TheHeader />
       <main className='mt-14 flex'>
         <Aside />
+        <Content />
       </main>
     </>
   );

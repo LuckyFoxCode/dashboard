@@ -6,6 +6,32 @@ export const router = createBrowserRouter([
     path: '/',
     element: <Root />,
     errorElement: <NotFound />,
+    children: [
+      {
+        path: '/',
+        element: <h1>Dashboard v.2</h1>,
+      },
+      {
+        path: '/vital-task',
+        element: <h1>Vital Task</h1>,
+      },
+      {
+        path: '/my-task',
+        element: <h1>My Task</h1>,
+      },
+      {
+        path: '/task-categories',
+        element: <h1>Task Categories</h1>,
+      },
+      {
+        path: '/settings',
+        element: <h1>Settings</h1>,
+      },
+      {
+        path: '/help',
+        element: <h1>Help</h1>,
+      },
+    ],
   },
   {
     path: 'register',
