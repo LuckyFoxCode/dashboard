@@ -14,7 +14,7 @@ export const ProgressRing: React.FC<ProgressRingProps> = ({
 }) => {
   return (
     <div className='flex flex-col'>
-      <div className='relative mb-5 flex size-[100px] items-center justify-center rounded-full border-[10px] border-slate-400'>
+      <div className='border- relative mb-5 flex size-[100px] items-center justify-center rounded-full border-[10px] border-slate-400'>
         <span className='font-montserrat text-xl text-black transition-all dark:text-white'>
           {progress}%
         </span>
