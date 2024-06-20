@@ -16,9 +16,14 @@ export default {
           '0%': { opacity: 0, transform: 'scale(0.9)' },
           '100%': { opacity: 1, transform: 'scale(1)' },
         },
+        progress: {
+          '0%': { strokeDashoffset: '0%' },
+          '100%': { strokeDashoffset: '100%' },
+        },
       },
       animation: {
         fadeInScaleIn: 'fadeInScaleIn 0.5s ease-in-out',
+        progress: 'progress 1s ease-out',
       },
     },
   },

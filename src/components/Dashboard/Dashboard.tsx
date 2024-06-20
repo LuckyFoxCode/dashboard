@@ -1,3 +1,4 @@
+import { TaskStatus } from '../TaskStatus';
 import { DashboardHeader } from './components';
 
 export const Dashboard: React.FC = () => {
@@ -5,7 +6,7 @@ export const Dashboard: React.FC = () => {
     <section className='flex flex-col'>
       <DashboardHeader />
       <div className='flex w-full flex-col rounded-md border px-6 py-5 shadow-header'>
-        Dashboard
+        <TaskStatus />
       </div>
     </section>
   );
