@@ -3,7 +3,7 @@ import { ProgressRing, TaskTitle } from '../common';
 
 export const TaskStatus: React.FC = () => {
   return (
-    <div className='flex w-full max-w-[420px] flex-col rounded-2xl bg-white px-6 pb-10 pt-6 shadow-header transition-all dark:bg-slate-800'>
+    <div className='flex w-full min-w-[420px] flex-col rounded-2xl bg-white px-6 pb-10 pt-6 shadow-header transition-all dark:bg-slate-800'>
       <TaskTitle
         iconName={MdOutlineTask}
         title='task status'
