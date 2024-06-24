@@ -5,7 +5,7 @@ interface ModalProps {
   children: React.ReactNode;
   className?: string;
   title: string;
-  lineWidth: string;
+  lineWidth: number;
 }
 
 export const Modal: React.FC<ModalProps> = ({
