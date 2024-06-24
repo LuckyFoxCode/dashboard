@@ -14,7 +14,7 @@ export const InviteModelForm: React.FC = () => {
 
   return (
     <form
-      className='flex items-end'
+      className='mb-7 flex items-end'
       onSubmit={handleSubmit}
     >
       <label

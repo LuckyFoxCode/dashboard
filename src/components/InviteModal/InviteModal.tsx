@@ -1,5 +1,5 @@
 import { Modal } from '../common';
-import { InviteModelForm } from './components';
+import { InviteModalMembers, InviteModelForm } from './components';
 
 export const InviteModal: React.FC = () => {
   return (
@@ -10,6 +10,7 @@ export const InviteModal: React.FC = () => {
     >
       <div className='mt-9 rounded border border-slate-300 px-3 py-5'>
         <InviteModelForm />
+        <InviteModalMembers />
       </div>
     </Modal>
   );
